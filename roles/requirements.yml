@@ -1,0 +1,10 @@
+---
+- name: cdougan-mq
+  src: git+https://somehost/scm/aan/jlpit-mq.git
+  version: origin/master
+- name: cdougan-os_setup
+  src: git+https://somehost/scm/aan/jlpit-os_setup.git
+  version: origin/master
+- name: cdougan-convert_envname
+  src: git+https://somehost/scm/aan/jlpit-convert_envname.git
+  version: origin/master

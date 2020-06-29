@@ -1,0 +1,18 @@
+---
+ - hosts: all
+   gather_facts: false
+   become: true
+   tasks:
+    - include_role: 
+        name: cdougan-mq/install
+      vars:
+        # valid versions: 8.0.0.2 / 9.0.5.0  / 9.1.0.0
+        mq_server_version: "8.0.0.2"
+        # valid versions: 8.0.0.3 / 8.0.0.5 / 8.0.0.11 / 9.1.0.1 / 9.1.1.0
+        mq_fixpack_version: 8.0.0.5
+        # valid options - Z2SH / Z4SH / Z4MD / Z2MD
+        # Z2 - Secure Apps(Web), Z3 - DB, Z4 - Apps, Z5 - Backups, Z6 - Management
+        # SH - Shared, MD - Master Data
+        application_purpose: Z0SH
+        # examples - WPOS, BCRE, ONPS, WCIM, MPSL
+        appcode: ABCD
